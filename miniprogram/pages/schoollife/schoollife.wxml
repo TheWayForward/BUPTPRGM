@@ -1,0 +1,92 @@
+<view class="search_align">
+<input placeholder="搜索全部文章" class="input" bindinput="input"></input>
+</view>
+
+<view class="filter_align">
+
+<view class="filter" style="color:{{color_1}}" hover-class="hv" hover-stay-time="30" bindtap="filter_1"> 课堂内外
+<view class="weui-loadmore weui-loadmore_line weui-loadmore_dot" style="margin-top:10rpx; background-color:{{color_1}}; height:5rpx; border-radius:10rpx">
+    </view>
+</view>
+<view class="filter" style="color:{{color_2}}" hover-class="hv" hover-stay-time="30" bindtap="filter_2"> 自我提升
+<view class="weui-loadmore weui-loadmore_line weui-loadmore_dot" style="margin-top:10rpx; background-color:{{color_2}}; height:5rpx; border-radius:10rpx">
+</view>
+</view>
+<view class="filter" style="color:{{color_3}}" hover-class="hv" hover-stay-time="30" bindtap="filter_3"> 休闲娱乐
+<view class="weui-loadmore weui-loadmore_line weui-loadmore_dot" style="margin-top:10rpx; background-color:{{color_3}}; height:5rpx; border-radius:10rpx">
+</view>
+</view>
+</view>
+
+  <view class="mobi_title" style="background:transparent; margin-top:15rpx;" hidden="{{!articles_1}}">
+    <text class="mobi_icon"></text>
+    <text>课 堂 内 外</text>
+  </view>
+
+<view style="align-items:center" hidden="{{loadinghide}}">
+<image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1587724074005&di=b3800cdcb75980d4dadda205e2db7329&imgtype=0&src=http%3A%2F%2F3580.wangid.com%2Ftemplate_xin%2Fmingxingbao%2Fimg%2Fmxb.gif" style="height:600rpx; width:830rpx; margin-left:-42rpx;"></image>
+</view>
+
+<block wx:for="{{articles_1}}" wx:key="_id" hidden="{{isHide}}">
+    <view class="list" style="margin-top:20rpx; filter: drop-shadow(0rpx 5rpx 5rpx #999999); background:#eee">
+      <view class="list-img" hover-class="btnhv1" hover-stay-time="30">
+        <image class="video-img" mode="aspectFill" src="{{item.thumbnail}}" bindtap="preview" data-action="{{item.thumbnail}}" ></image>
+      </view>
+      <view class="list-detail" hover-class="btnhv1" hover-stay-time="30" data-action="{{item.isAvailable}}" data-n="{{item._id}}" bindtap="goto_article">
+        <view class="list-title"><text>{{item.title}}</text></view>
+        <view class="list-tag"><view class="state" style="color:{{color[item.isAvailable]}}">{{item.status}}</view><view class="join">阅读：<text class="list-num">{{item.click}}</text></view></view>
+        <view class="list-info"><text>{{item.time}}</text> · <text>{{item.author}}</text></view>
+      </view> 
+    </view>
+  </block>
+
+  <view class="mobi_title" style="background:transparent" hidden="{{!articles_2}}">
+    <text class="mobi_icon" style="background:#8BC34A"></text>
+    <text>自 我 提 升</text>
+  </view>
+
+<block wx:for="{{articles_2}}" wx:key="_id" hidden="{{isHide}}">
+    <view class="list" style="margin-top:20rpx; filter: drop-shadow(0rpx 5rpx 5rpx #999999); background:#eee">
+      <view class="list-img" hover-class="btnhv1" hover-stay-time="30">
+        <image class="video-img" mode="aspectFill" src="{{item.thumbnail}}" bindtap="preview" data-action="{{item.thumbnail}}" ></image>
+      </view>
+      <view class="list-detail" hover-class="btnhv1" hover-stay-time="30" data-action="{{item.isAvailable}}" data-n="{{item._id}}" bindtap="goto_article">
+        <view class="list-title"><text>{{item.title}}</text></view>
+        <view class="list-tag"><view class="state" style="color:{{color[item.isAvailable]}}">{{item.status}}</view><view class="join">阅读：<text class="list-num">{{item.click}}</text></view></view>
+        <view class="list-info"><text>{{item.time}}</text> · <text>{{item.author}}</text></view>
+      </view> 
+    </view>
+  </block>
+
+  <view class="mobi_title" style="background:transparent" hidden="{{!articles_3}}">
+    <text class="mobi_icon" style="background:#F6A078"></text>
+    <text>休 闲 娱 乐</text>
+  </view>
+
+<block wx:for="{{articles_3}}" wx:key="_id" hidden="{{isHide}}">
+    <view class="list" style="margin-top:20rpx; filter: drop-shadow(0rpx 5rpx 5rpx #999999); background:#eee">
+      <view class="list-img" hover-class="btnhv1" hover-stay-time="30">
+        <image class="video-img" mode="aspectFill" src="{{item.thumbnail}}" bindtap="preview" data-action="{{item.thumbnail}}" ></image>
+      </view>
+      <view class="list-detail" hover-class="btnhv1" hover-stay-time="30" data-action="{{item.isAvailable}}" data-n="{{item._id}}" bindtap="goto_article">
+        <view class="list-title"><text>{{item.title}}</text></view>
+        <view class="list-tag"><view class="state" style="color:{{color[item.isAvailable]}}">{{item.status}}</view><view class="join">阅读：<text class="list-num">{{item.click}}</text></view></view>
+        <view class="list-info"><text>{{item.time}}</text> · <text>{{item.author}}</text></view>
+      </view> 
+    </view>
+  </block>
+
+<view hidden="{{isHide}}">
+ <block wx:for="{{articles}}" wx:key="_id">
+    <view class="list" style="margin-top:20rpx; filter: drop-shadow(0rpx 5rpx 5rpx #999999); background:#eee">
+      <view class="list-img" hover-class="btnhv1" hover-stay-time="30">
+        <image class="video-img" mode="aspectFill" src="{{item.thumbnail}}" bindtap="preview" data-action="{{item.thumbnail}}" ></image>
+      </view>
+      <view class="list-detail" hover-class="btnhv1" hover-stay-time="30" data-action="{{item.isAvailable}}" data-n="{{item._id}}" bindtap="goto_article">
+        <view class="list-title"><text>{{item.title}}</text></view>
+        <view class="list-tag"><view class="state" style="color:{{color[item.isAvailable]}}">{{item.status}}</view><view class="join">阅读：<text class="list-num">{{item.click}}</text></view></view>
+        <view class="list-info"><text>{{item.time}}</text> · <text>{{item.author}}</text></view>
+      </view> 
+    </view>
+  </block>
+</view>

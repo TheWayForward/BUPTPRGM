@@ -1,0 +1,15 @@
+<view class="view"> 
+ <block wx:for="{{x_pics}}" wx:key="_id">
+  <view hover-class="hv" hover-stay-time="30">
+    <image lazy-load="true" bindtap="preview" data-action="{{item.url}}" src="{{item.url}}" mode="aspectFill" class="picimage" style="border-radius: 3px"></image>
+  </view>
+ </block>
+</view>
+
+<view class="weui-loadmore weui-loadmore_line weui-loadmore_dot">
+</view>
+<view class="footer">
+  <view class="weui-footer">
+    <view class="weui-footer__text" >{{amount}}图片有限，邮苑风光无限!</view> 
+  </view>
+</view>

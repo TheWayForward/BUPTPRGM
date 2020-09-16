@@ -1,0 +1,6 @@
+
+  <view class="uploader">
+    <navigator url="./room/room" open-type="navigate" class="uploader-text">
+      <text>进入聊天室</text>
+    </navigator>
+  </view>

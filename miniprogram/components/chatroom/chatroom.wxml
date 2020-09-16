@@ -1,0 +1,82 @@
+<view class="chatroom">
+  
+
+  <!-- chats -->
+  <scroll-view 
+    class="body" 
+    scroll-y 
+    scroll-with-animation="{{scrollWithAnimation}}"
+    scroll-top="{{scrollTop}}" 
+    scroll-into-view="{{scrollToMessage}}"
+    bindscrolltoupper="onScrollToUpper"
+  >
+    <view 
+      wx:for="{{chats}}"
+      wx:key="{{_id}}"
+      id="item-{{index}}"
+      class="message {{openId == item._openid ? 'message__self' : ''}}"
+    >
+      <image 
+        style="border-radius: 3px"
+        class="avatar"
+        src="{{item.avatar}}"
+        mode="scaleToFill"
+      ></image> 
+      <view class="main">
+        <view class="nickname">{{item.nickName}}</view>
+        <block wx:if="{{item.msgType === 'image'}}">
+          <view class="image-wrapper">
+            <view class="loading" wx:if="{{item.writeStatus > -1}}">{{item.writeStatus}}%</view>
+            <image 
+              src="{{item.tempFilePath || item.imgFileID}}" 
+              data-fileid="{{item.tempFilePath || item.imgFileID}}" 
+              class="image-content" 
+              mode="widthFix" 
+              bindtap="onMessageImageTap"></image>
+          </view>
+        </block>
+        <block wx:else>
+          <view class="text-wrapper">
+            <view class="loading" wx:if="{{item.writeStatus === 'pending'}}">···</view>
+            <view class="text-content">{{item.textContent}}</view>
+          </view>
+        </block>
+      </view>
+    </view>
+  </scroll-view>
+
+  <!-- message sender -->
+  <view class="footer">
+    <view class="message-sender" wx:if="{{userInfo}}">
+      <input 
+        class="text-input"
+        type="text"
+        confirm-type="send"
+        bindconfirm="onConfirmSendText"
+        cursor-spacing="20"
+        value="{{textInputValue}}"
+        placeholder=""
+      ></input>
+
+      <image 
+        src="../photo.png" 
+        class="btn-send-image" 
+        mode="scaleToFill"
+        bindtap="onChooseImage"
+      ></image>
+    </view>
+
+    <view class="message-sender" wx:if="{{!userInfo}}">
+      <button 
+        open-type="getUserInfo" 
+        bindgetuserinfo="onGetUserInfo"
+        class="userinfo"
+        style="height:80rpx"
+        hover-class="hv1"
+        hover-stay-time="30"
+      ><text class="txt1">点击登录</text></button>
+    </view>
+  </view>
+
+</view>
+

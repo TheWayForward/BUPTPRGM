@@ -1,0 +1,258 @@
+page{
+  background:#F5F5F5;
+  }
+
+.container{
+width: 100%;
+}
+
+.goTop{
+  position: fixed;
+  bottom: 20px;
+  right: 15px;
+  width: 25px;
+  height: 25px;
+  z-index: 15;
+}
+
+
+.view1{
+  border-radius: 40rpx;
+}
+
+.swiper{
+  filter: drop-shadow(0rpx 15rpx 10rpx #999999);
+  margin: 22rpx;
+  width: 94%;
+  height: 430rpx;
+  border-radius:40rpx; 
+ 
+}
+
+swiper image {
+ height: 100%;
+ width: 100%;
+ border-radius:40rpx;
+
+}
+
+.txt1{
+  display: flex;
+  font-size: 20rpx;
+  color: whitesmoke;
+}
+
+.scrollalign{
+  margin-left: 15rpx;
+  display: flex;
+  justify-content: center;
+  border-radius: 35rpx;
+  align-items: center;
+  background:linear-gradient(to right, rgba(106, 188, 235, 0.89) , rgba(245, 245, 245, 0));
+  filter: drop-shadow(-5rpx 0rpx 10rpx #e9e9e9);
+  
+}
+
+.scrolltxt{
+  padding:0 10rpx;
+  padding-left: 20rpx;
+  border-radius: 5rpx;
+}
+
+.scroll_logo{
+margin-left: 10rpx;
+max-width: 50rpx;
+}
+
+.box {
+  position:relative; 
+  color:rgb(0, 71, 119);
+  width: 100%;
+  border-radius: 80rpx;
+  height:70rpx;
+  display:block;
+  overflow:hidden;
+} 
+
+.text {
+  white-space: nowrap;
+  position:absolute;
+  top:0;
+  font-size:25rpx;
+  height:70rpx;
+  line-height:70rpx;
+}
+
+.tip{ 
+  font-size: 20rpx;
+  position:relative; 
+  color:rgb(0, 119, 255);
+  width: 25%;
+  border-radius: 35rpx;
+  height:32rpx;
+  display:block;
+}
+
+.btnalign1{
+  z-index: 11;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  align-items: center;
+}
+
+.btnalign2{
+  display: flex;
+  width: 100%;
+}
+
+.btn1{
+margin:5rpx; 
+border-radius: 10rpx;
+align-self: center;
+background: rgb(241, 241, 241);
+max-width: 180rpx;
+box-shadow:0px 0px 0px 0px gainsboro,   /*上边阴影*/
+           0px 0px 0px 0px gainsboro,   /*左边阴影*/
+           0px 0px 0px 0px gainsboro,    /*右边阴影*/
+          0px 8px 8px 0px gainsboro;    /*下边阴影*/
+}
+
+.btn2{
+border-radius: 15px;
+background: #F5F5F5;
+width: 356rpx;
+margin-left: 13rpx;
+box-shadow:0px 0px 0px 0px gainsboro,   /*上边阴影*/
+           0px 0px 0px 0px gainsboro,   /*左边阴影*/
+           0px 0px 0px 0px gainsboro,    /*右边阴影*/
+          0px 8px 4px 0px gainsboro;    /*下边阴影*/
+}
+
+.btnhv1{
+   opacity:0.7;
+
+}
+
+.blank{
+  margin: 40px;
+}
+
+.search{
+  width: 740rpx;
+  height: 65rpx;
+  padding: 12.5rpx 0 12.5rpx 15rpx;
+  background: rgb(121, 198, 235);
+  border-radius: 45rpx;
+  margin-top: -60rpx;
+  box-shadow:0 0 50px 30px rgb(252, 252, 252) inset;
+}
+.search-left{
+  flex: 8;
+  background:#e0e0e0;
+  text-align: left;
+   border-radius: 50rpx;
+   
+}
+.search-left input{
+  display: inline-block;
+  height: 65rpx;
+  font-size: 26rpx;
+}
+.search-placeholder{
+  color: rgb(138, 138, 138);
+  line-height: 20rpx;
+}
+.search .search-left image{
+  display: inline-block;
+  width: 35rpx;
+  height: 35rpx;
+  padding: 15rpx 15rpx 15rpx 20rpx;
+}
+.search .search-right{
+  flex: 1;
+}
+.search .search-right image{
+  width: 45rpx;
+  height: 45rpx;
+  padding: 10rpx;
+}
+
+.question {
+    position: relative;
+    width: 100%;
+    padding: 20rpx 0rpx 60rpx;
+    background: linear-gradient(to top, rgb(228, 228, 228), rgba(245, 245, 245, 0));
+    font-size: 38rpx;
+    line-height: 48rpx;
+    border-radius: 80rpx;
+}
+.answerer-wrp{
+    margin-top:-60rpx; 
+    position: relative;
+    width: 750rpx;
+    height: 100rpx;
+    background: rgba(255, 255, 255, 0);
+}
+.answerer-wrp .bg-half{
+    position: absolute;
+    margin-top: -35rpx;
+    width: 750rpx;
+    height: 75rpx;
+    border-radius: 20rpx;
+    background: rgba(41, 141, 229, 0.712);
+}
+
+.answerer {
+    position: relative;
+    margin: 0 auto;
+    width: 630rpx;
+    height: 90rpx;
+    padding: 30rpx;
+    background: rgba(253, 253, 253, 0.8);
+    border: solid 1px #ebebeb;
+    border-radius: 3px;
+    box-shadow: 0 1px 2px #bebebe;
+}
+.answerer .avatar {
+    flex: 1;
+    width: 90rpx;
+    height: 90rpx;
+}
+
+.answerer .avatar image {
+    display: inline-block;
+    width: 90rpx;
+    height: 90rpx;
+    border-radius: 90rpx;
+}
+.answerer .answerer-info{
+    flex: 5;
+    text-align: left;
+    padding: 10rpx 20rpx;
+    line-height: 38rpx;
+}
+.answerer .answerer-info text{
+    display: block;
+}
+.answerer .answerer-info .answerer-name{
+    font-size: 32rpx;
+}
+.answerer .answerer-info .answerer-des{
+    font-size: 22rpx;
+    color: #808080;
+    line-height: 28rpx;
+}
+.answerer .follow{
+    flex: 2;
+    padding: 15rpx 0;
+    font-size: 22rpx;
+}
+.answerer .follow text{
+    display: inline-block;
+    padding: 15rpx 20rpx;
+    color: #40bcd0;
+    border: solid 2px #40bcd0;
+    border-radius: 6rpx;
+}
+

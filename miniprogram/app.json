@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/schoollife/schoollife",
+    "pages/official/official",
+    "pages/feedback/feedback",
+    "pages/x_pics/x_pics",
+    "pages/article/article",
+    "pages/schoollifearticle/schoollifearticle",
+    "pages/im/room/room",
+    "pages/s_pics/s_pics",
+    "pages/im/im"
+  ],
+  "window": {
+    "navigationStyle":"default",
+    "navigationBarBackgroundColor": "#188FC8",
+    "navigationBarTitleText": "北邮宣讲通"
+  },
+  "sitemapLocation": "sitemap.json",
+  "style": "v2",
+  "navigateToMiniProgramAppIdList": [
+    "wxefaf5e5f6d0db43b",
+    "wx5a4294756cb7eaa6"
+  ],
+  "permission": {
+    "scope.userLocation": {
+      "desc": "小程序将获取您的位置信息，用于意见反馈"
+    }
+  }
+}

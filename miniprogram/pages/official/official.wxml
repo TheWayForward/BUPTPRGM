@@ -1,0 +1,85 @@
+<view class="cview" hidden="{{!isHide}}">
+<view wx:for="{{hnode}}" wx:key="_id" class="html">
+<rich-text class="html" selectable="true" nodes='{{item.node}}'></rich-text>
+</view>
+</view>
+
+<view class="weui-loadmore weui-loadmore_line weui-loadmore_dot" hidden="{{isHide}}"></view>
+
+<view style="align-items:center">
+<image hidden="{{isHide}}" src="http://m.qpic.cn/psc?/V10ldMks1MA0AI/wK0kFdeCHxQUuvx1sBu8JBduFHkfJOfhhG*ZdCeq6BAiNc82*HyzPHvYg**jTUIov45GO8VZVw5JLGQ4bk8NMg!!/b&bo=aAKzAGgCswADCSw!&rf=viewer_4" style="width:540rpx; height:155rpx; margin-left:96rpx"></image>
+</view>
+
+
+<view class="dc_align">
+
+<view class="developer_container">
+<view class="developer_inner_container" wx:for="{{developers_2}}" wx:key="_id" style="background-color:{{item.Color}}; height:{{item.len}}rpx" hover-class="hv" hover-stay-time="30">
+<image src="{{item.Avatar}}" class="avatar"></image>
+<view class="developer_name">{{item.Name}}</view>
+<view class="developer_group">{{item.Group}}</view>
+<view class="weui-loadmore weui-loadmore_line weui-loadmore_dot" style="width:300rpx; margin-top:20rpx"></view>
+<view class="developer_details">{{item.Details}}</view>
+</view>
+</view>
+
+
+
+
+<view class="developer_container">
+<view class="developer_inner_container" wx:for="{{developers_1}}" wx:key="_id" style="background-color:{{item.Color}}; height:{{item.len}}rpx" hover-class="hv" hover-stay-time="30">
+<image src="{{item.Avatar}}" class="avatar"></image>
+<view class="developer_name">{{item.Name}}</view>
+<view class="developer_group">{{item.Group}}</view>
+<view class="weui-loadmore weui-loadmore_line weui-loadmore_dot" style="width:300rpx; margin-top:20rpx"></view>
+<view class="developer_details">{{item.Details}}</view>
+</view>
+</view>
+
+</view>
+
+<view class="footer" hidden="{{isHide}}">
+<view class="weui-footer">
+<view class="weui-footer__text" style="margin-top:60rpx">让科技惠及每个人 为学子点亮大学梦</view>
+</view>
+</view>
+<view class="weui-loadmore weui-loadmore_line weui-loadmore_dot" hidden="{{isHide}}"></view>
+
+<view style="align-items:center">
+<image src="http://m.qpic.cn/psc?/V10ldMks1MA0AI/wK0kFdeCHxQUuvx1sBu8JNJUxFbbErgmEaVmZPLP6GS6x77*5rcGUl6Xxi3PPgipTS*1SxEbYAvBl6FO3WLm*w!!/b&bo=CAKFAAgChQADCSw!&rf=viewer_4" hidden="{{isHide}}" style="width:540rpx; height:135rpx; margin-left:96rpx"></image>
+</view>
+
+<view class='g_con' hidden="{{isHide}}">
+  <view class='expressRecord'>
+    <view class='expressRecord-single-close' wx:for="{{p}}" wx:key="_id">
+      <!-- 左边子容器 -->
+      <view class='expressRecord-single-noReach-online-top-close'>
+        <!-- 正在进行的时间轴上半个时间线 -->
+        <view class='online-top-closing'></view>
+        <!-- 正在进行的时间轴点 -->
+        <view class='dot-closing'></view>
+        <!-- 正在进行的时间轴下半个时间线 -->
+        <view class='online-bottom'></view>
+      </view>
+
+      <!-- 右边子容器 -->
+      <view class='expressRecord-text'>
+        <view class='expressRecord-statusing'>进度：{{item.progresscode}}</view>
+        <view class='expressRecord-status-addressing'>{{item.details}}</view>
+      </view>
+
+   
+      <view class='expressRecord-dating'>
+        <view class='expressRecord-date-text'>
+          {{item.year}}
+        </view>
+        <view class='expressRecord-date-time'>
+          {{item.date}}
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="weui-loadmore weui-loadmore_line weui-loadmore_dot" hidden="{{isHide}}"></view>
+<image src="https://www.bupt.edu.cn/__local/C/8E/F7/EE902059AE32E0E6325EFEE8F46_B2D41D06_CD58.png" style="height:160rpx; margin-left:80rpx; margin-bottom:50rpx" hidden="{{isHide}}"></image>

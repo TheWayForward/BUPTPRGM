@@ -1,0 +1,25 @@
+<view class="container">
+	<view class="bg-f5f5f5 p-lr30 border-t">
+  <view class="ipt-wrap border-b flex ai-center"> <label  class="font16">昵称</label> <text class="ml40 flex1">{{nickname}}</text> <image src="{{avatar}}" style="height:60rpx; width:60rpx; border-radius:7rpx"></image></view>
+		<view class="ipt-wrap border-b flex ai-center" hidden="{{isAnonymous}}"> <label  class="font16">姓名</label> <input type="text" class="ml40 flex1" placeholder="请输入姓名" bindinput="input_name" maxlength="20"></input> </view>
+    <view class="ipt-wrap border-b flex ai-center"> <label for="" class="font16">匿名反馈</label> <switch class="ml40 flex1" color="#188FC8" bindchange="setanno"></switch> <view style="margin-left:100rpx; width:350rpx;"></view></view>
+     <view class="ipt-wrap border-b flex ai-center jc-sb">
+			<view class="flex ai-center"> <label for="" class="font16">年龄</label>
+      <picker class="ml40" bindchange="agechange" range="{{agearray}}">{{age}}</picker>
+			</view>
+		</view>
+   <view class="ipt-wrap border-b flex ai-center jc-sb">
+			<view class="flex ai-center"> <label for="" class="font16">性别</label>
+      <text class="ml40 flex1">{{gen}}</text>
+			</view>
+		</view>
+	<view class="ipt-wrap border-b flex ai-center"> <label  class="font16">所在地区</label> <text class="ml40 flex1" bindtap="get_location">{{loc}}</text> <image src="http://m.qpic.cn/psc?/V10ldMks1MA0AI/riQ3veziueHEEyvCcu4t0yEzE6T3BT1b0CzjAN9UzK2LfthmNNh*zGqLRZuNLLRRdABXBwZ68A*PZ1zga2n87esKQlhxnBlhRaCy9wthMFw!/b&bo=9AH0AfQB9AEDGTw!&rf=viewer_4" style="height:60rpx; width:60rpx; border-radius:7rpx" bindtap="get_location"></image></view>
+		<view class="ipt-wrap border-b flex ai-center"> <label for="" class="font16">手机号码</label> <input type="text" class="ml40 flex1" maxlength="11" placeholder="请输入手机号码" bindinput="input_phone"></input> <image src="http://m.qpic.cn/psc?/V10ldMks1MA0AI/riQ3veziueHEEyvCcu4t03HIRT8K0dBPsqTAPnvYnkvkIhHBTLFatXe.wqnTyEfuiOps.v2TFCrDKtg.uUSP*vb0SAnC7EYG0t2mIN9OVbs!/b&bo=agFpAWoBaQEDGTw!&rf=viewer_4" style="height:60rpx; width:60rpx; border-radius:7rpx"></image></view>
+    <view class="ipt-wrap border-b flex ai-center"> <label for="" class="font16">QQ</label> <input type="text" class="ml40 flex1" maxlength="11" placeholder="请输入QQ号码" bindinput="input_QQ"></input><image src="http://m.qpic.cn/psc?/V10ldMks1MA0AI/riQ3veziueHEEyvCcu4t015qyRu*x0f66Ecob2y882NGHgalBq8qjD*NhktQQ0ZrOhUF1HpHQy9MUKmMJ0.6emRVlGA8PLRPjbg4LKPBQ9E!/b&bo=LgEsAS4BLAEDGTw!&rf=viewer_4" style="height:60rpx; width:60rpx; border-radius:7rpx"></image> </view>
+    <view class="ipt-wrap border-b flex ai-center" hidden="{{fbmail}}"> <label for="" class="font16">电子邮箱</label> <input type="text" class="ml40 flex1" placeholder="反馈提交成功，您将收到邮件" bindinput="input_email"></input> <image src="http://m.qpic.cn/psc?/V10ldMks1MA0AI/riQ3veziueHEEyvCcu4t0*RxEwW2tlgiwnDn0cjFdV*uxmdD4R2FGhf*iZ*.MrHfvy*j344si4qz3jb84vrD3Wzg6HQ0hIEP7hcKhjjmyvA!/b&bo=9AH0AfQB9AEDGTw!&rf=viewer_4" style="height:60rpx; width:60rpx; border-radius:7rpx"></image></view>
+     <view class="ipt-wrap border-b flex ai-center"> <label class="font16">拒收邮件</label> <switch class="ml40 flex1" color="#188FC8" bindchange="setemail"></switch> <view style="margin-left:100rpx; width:350rpx;"></view></view>
+		<view class="ipt-wrap border-b"> <textarea class="textarea  _w100 p-tb30 lh20" maxlength="1000" placeholder="在此输入您的宝贵意见" bindinput="input_fb"></textarea> </view>
+	</view>
+	<view class="combtn font16 color-fff _w100 bg-btn" bindtap="submit" style="font-weight:bold;" hover-class="hv" hover-stay-time="30"> 提 交 反 馈 </view>
+
+</view>

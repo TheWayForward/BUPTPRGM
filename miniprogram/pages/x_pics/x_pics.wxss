@@ -1,0 +1,28 @@
+page{
+  background:#F5F5F5;
+  background-image: url(http://r.photo.store.qq.com/psb?/V10ldMks1Z5QlW/3o.bubGKjZUWqnPE*VBDQPQMBzjCjHpq5pYSUtJVfBM!/r/dBsAAAAAAAAA);
+  background-attachment: fixed;
+}
+
+.view{
+  justify-content: center;
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  flex-flow: row wrap;  
+  align-content: space-evenly;
+}
+
+.picimage{
+  display: flex;
+  flex-direction: row;
+  height: 155rpx;
+  width: 155rpx;
+  margin: 15rpx;
+  border-radius: 10rpx;
+  box-shadow: 1px 1px 2px 1px gainsboro;
+}
+
+.hv{
+  opacity: 0.7;
+}

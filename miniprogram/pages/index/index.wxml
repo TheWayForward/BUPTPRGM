@@ -1,0 +1,124 @@
+<image src='../../images/top.png' class='goTop' hidden='{{showTop}}' bindtap='goTop'></image>
+
+<view class="view1" hover-class="btnhv1">
+  <swiper indicator-dots='true' indicator-color='white' indicator-active-color='grey' autoplay='true' class="swiper">
+    <swiper-item wx:for="{{poster}}" wx:key="_id">
+      <image class="swiper-image" src="{{item.poster}}" mode="aspectFill" data-action="{{item.poster}}" bindtap="preview" ></image>
+    </swiper-item>
+  </swiper>
+</view>
+
+
+<view class="scrollalign">
+<image class="scroll_logo" src="{{logo}}" mode="scaleToFill" style="height:50rpx"></image>
+<scroll-view>
+   <view class="scrolltxt">
+   <view class="box">
+    <view class="text" style="transform: translateX(-{{distance}}px)">
+     <text class="boxtext">{{text}}</text>
+     <text style="margin-right:{{margin}}px"></text>
+     <text style="margin-right:{{margin}}px">{{text}}</text>    
+    </view>
+   </view>
+  </view>
+</scroll-view>
+<view class="tip" hover-class="btnhv1" bindtap="goto_feedback">点我反馈</view>
+</view>
+
+<view class="btnalign1">
+ <view hover-class="btnhv1" hover-stay-time="30">
+   <image class="btn1" src="{{b1}}" mode="scaleToFill" style="height:180rpx" bindtap="goto_miniprogram1"></image>
+ </view>
+ <view hover-class="btnhv1" hover-stay-time="30">
+  <image class="btn1" src="{{b2}}" mode="scaleToFill" style="height:180rpx" bindtap="goto_miniprogram2"></image>
+ </view>
+ <view hover-class="btnhv1" hover-stay-time="30">
+ <image class="btn1" src="{{b3}}" mode="scaleToFill" style="height:180rpx" bindtap="goto_schoollife"></image>
+ </view>
+ <view hover-class="btnhv1" hover-stay-time="30">
+ <image class="btn1" src="{{b4}}" mode="scaleToFill" style="height:180rpx" bindtap="goto_chat"></image>
+ </view>
+</view>
+
+
+<view class="question">
+        <text class="question-title"></text>
+    </view>
+
+<view class="answerer-wrp">
+        <view class="answerer flex-wrp">
+            <view class="avatar flex-item" hover-class="btnhv1" hover-stay-time="30">
+                <image src="{{userImage}}"></image>
+            </view>
+            <view class="answerer-info flex-item">
+                <text class="answerer-name">{{userWelcome}}</text>
+                <text class="answerer-des">{{userTip}}</text>
+            </view>
+            <view wx:if="{{!userInfo}}" class="follow flex-item" hover-class="btnhv1" bindtap="getUserInfo">
+                <text>点击登录</text>
+            </view>
+        </view>
+  </view>
+
+<view wx:for="{{hnode}}" wx:key="_id" style="z-index:0">
+<rich-text selectable="true" nodes='{{item.node}}'></rich-text>
+</view>
+
+<view class="search flex-wrp" style="z-index:1">
+      <view class="search-left flex-item">
+          <image src="../../images/search.png"></image>
+          <input placeholder="搜索资讯" placeholder-class="search-placeholder" bindinput="input"></input>
+      </view>
+      <view class="search-right flex-item" bindtap="search">
+          <image src="http://b207.photo.store.qq.com/psb?/V10ldMks1Z5QlW/fsDcWa3XJw77O1*Pu0Wysexj1azK9sy3lyzhuBPHhm8!/b/dM8AAAAAAAAA&bo=OAQ4BAAAAAADByI!&rf=viewer_4"></image>
+      </view>
+  </view>
+
+<view class="mobi_title">
+    <text class="mobi_icon"></text>
+    <text>资  讯</text>
+  </view>
+  <block wx:for="{{search_articles}}" wx:key="_id">
+    <view class="list" style="filter: drop-shadow(0rpx 5rpx 5rpx #999999);">
+      <view class="list-img" hover-class="btnhv1" hover-stay-time="30">
+        <image class="video-img" mode="aspectFill" src="{{item.thumbnail}}" bindtap="preview" data-action="{{item.thumbnail}}" ></image>
+      </view>
+      <view class="list-detail" hover-class="btnhv1" hover-stay-time="30" data-action="{{item.isAvailable}}" data-n="{{item._id}}" bindtap="goto_article">
+        <view class="list-title"><text>{{item.title}}</text></view>
+        <view class="list-tag"><view class="state" style="color:{{color[item.isAvailable]}}">{{item.status}}</view><view class="join">阅读：<text class="list-num">{{item.click}}</text></view></view>
+        <view class="list-info"><text>{{item.time}}</text> · <text>{{item.author}}</text></view>
+      </view> 
+    </view>
+  </block>
+
+<view class="mobi_title">
+    <text class="mobi_icon" style="background-color:indigo"></text>
+    <text>北 邮 相 册</text>
+  </view>
+
+<view class="btnalign2">
+ <view hover-class="btnhv1" hover-stay-time="30">
+   <image class="btn2" src="{{b5}}" mode="scaleToFill" style="height:180rpx" bindtap="goto_x_pics"></image>
+ </view>
+ <view hover-class="btnhv1" hover-stay-time="30">
+ <image class="btn2" src="{{b6}}" mode="scaleToFill" style="height:180rpx" bindtap="goto_s_pics"></image>
+ </view>
+</view>
+
+
+<view animation="{{slide_up2}}" class="weui-loadmore weui-loadmore_line weui-loadmore_dot">
+    </view>
+<view class="footer" animation="{{slide_up1}}">
+<view class="weui-footer">
+<view class="weui-footer__text" >我是有底线的</view>
+</view>
+</view>
+
+<view class="footer" animation="{{slide_up1}}">
+<view class="weui-footer">
+<view class="weui-footer__links">
+    <navigator url="../../pages/official/official" class="weui-footer__link">开发日志</navigator>
+</view>
+<view class="weui-footer__text" >Copyright © 北京邮电大学 Tr Wy Fowrd</view>
+</view>
+</view>
